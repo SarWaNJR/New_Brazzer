@@ -684,7 +684,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 
 .box {
   position: relative;
-  background: var("--PornImg");
+  background: var(--PornImg);
   background-position: center;
   background-size: cover;
   display: flex;
