@@ -19,8 +19,15 @@
             <li>Videos</li>
             <li>About</li>
             <div class="responsive__btn">
-              <button class="btn">Login</button>
-              <button class="btn btn-1">Sign Up</button>
+              <button class="btn" id="ButtonClick4" onclick="BtnClicked4()">
+                Login
+              </button>
+              <button
+                class="btn btn-1"
+                id="ButtonClick_4"
+                onclick="BtnClicked_4()">
+                Sign Up
+              </button>
             </div>
           </ul>
           <div class="container__header--signin_up">
@@ -304,6 +311,37 @@
         });
         RemoveBtn2[0].addEventListener("click", function BtnRemove2() {
           signupPage.forEach((remove) => {
+            remove.classList.remove("Active__Signup");
+          });
+        });
+      });
+
+      // Login Btn JS
+      let Button4 = document.getElementById("ButtonClick4");
+      let LoginPage4 = document.querySelectorAll(".login_form");
+      let RemoveBtn4 = document.getElementsByClassName("close_icon");
+
+      Button4.addEventListener("click", function BtnClicked_4() {
+        LoginPage4.forEach((login) => {
+          login.classList.add("Active__Login");
+        });
+        RemoveBtn4[0].addEventListener("click", function BtnRemove4() {
+          LoginPage4.forEach((remove) => {
+            remove.classList.remove("Active__Login");
+          });
+        });
+      });
+      // Signup Btn JS
+      let Button5 = document.getElementById("ButtonClick_4");
+      let signupPage5 = document.querySelectorAll(".signup_form");
+      let RemoveBtn5 = document.getElementsByClassName("close_icon2");
+
+      Button5.addEventListener("click", function BtnClicked_4() {
+        signupPage5.forEach((login) => {
+          login.classList.add("Active__Signup");
+        });
+        RemoveBtn5[0].addEventListener("click", function BtnRemove_4() {
+          signupPage5.forEach((remove) => {
             remove.classList.remove("Active__Signup");
           });
         });
