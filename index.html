@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web World</title>
+    <link rel="stylesheet" href="./assets/css/index.css" />
+  </head>
+  <body>
+    <div class="container" id="header">
+      <header class="container__header">
+        <div class="container__header--logo">
+          <img src="./assets/img/5f1b1271a1e429.16105348.png" alt="logo" />
+        </div>
+        <div class="container__header--navlinks">
+          <ul class="lists">
+            <li>Home</li>
+            <li>Pics</li>
+            <li>Videos</li>
+            <li>About</li>
+            <div class="responsive__btn">
+              <button class="btn">Login</button>
+              <button class="btn btn-1">Sign Up</button>
+            </div>
+          </ul>
+          <div class="container__header--signin_up">
+            <button class="btn" id="ButtonClick" onclick="BtnClicked()">
+              Login
+            </button>
+            <button
+              class="btn btn-1"
+              id="ButtonClick_2"
+              onclick="BtnClicked2()">
+              Sign Up
+            </button>
+          </div>
+        </div>
+        <div class="svg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="w-5 h-5">
+            <path
+              fill-rule="evenodd"
+              d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm7 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
+      </header>
+      <!-- Popup Using JS -->
+      <!-- Login -->
+      <div class="login_form">
+        <div class="box">
+          <ion-icon
+            name="close-circle-outline"
+            class="close_icon"
+            onclick="BtnRemove()"></ion-icon>
+          <form action="">
+            <h2>LOGIN:</h2>
+            <div class="inputBox">
+              <input type="text" required />
+              <span>User Name:</span> <i></i>
+            </div>
+            <div class="inputBox">
+              <input
+                type="password"
+                maxlength="10"
+                minlength="8"
+                placeholder=""
+                required />
+              <span>Password:</span> <i></i>
+            </div>
+            <div class="links">
+              <a href="#">Forgot Password</a>
+              <a href="">Sign Up</a>
+            </div>
+            <input type="submit" value="Login" />
+          </form>
+        </div>
+      </div>
+      <!-- Sign-up -->
+      <div class="signup_form">
+        <div class="box">
+          <!-- <ion-icon name="trash-outline" class="close_icon"></ion-icon> -->
+          <ion-icon
+            name="close-circle-outline"
+            class="close_icon2"
+            onclick="BtnRemove2()"></ion-icon>
+          <form action="">
+            <h2>SignUp:</h2>
+            <div class="inputBox">
+              <input type="text" required maxlength="14" />
+              <span>First Name:</span> <i></i>
+            </div>
+            <div class="inputBox">
+              <input type="text" required maxlength="14" />
+              <span>Last Name:</span> <i></i>
+            </div>
+            <div class="inputBox">
+              <input type="email" required />
+              <span>Email:</span> <i></i>
+            </div>
+            <div class="inputBox">
+              <input
+                type="password"
+                maxlength="10"
+                minlength="8"
+                placeholder=""
+                required />
+              <span>Password:</span> <i></i>
+            </div>
+            <div class="links">
+              <a href="#">Forgot Password</a>
+              <a href="">Sign Up</a>
+            </div>
+            <input type="submit" value="SignUp" />
+          </form>
+        </div>
+      </div>
+      <!--  -->
+      <!-- Section -1 -->
+      <section>
+        <div>
+          <img src="./assets/img/cover.jpg" alt="" />
+        </div>
+      </section>
+    </div>
+    <!-- Image Slider -->
+    <div class="Galary__header" id="h2">
+      <h2>Images</h2>
+    </div>
+    <div class="Galary__grid">
+      <div class="img__slider">
+        <div
+          class="box one"
+          style="--PornImg: url('/assets/img/new_8.jpg')"
+          data-text="Lisa Ann CumShoot"></div>
+        <div
+          class="box two"
+          style="--PornImg: url('/assets/img/new_3.jpg')"
+          data-text="Big Booty"></div>
+        <div
+          class="box three"
+          style="--PornImg: url('/assets/img/new_4.jpg')"
+          data-text="Monster Cook Inside"></div>
+        <div
+          class="box four"
+          style="--PornImg: url('/assets/img/new_7.jpg')"
+          data-text="Deep Fuck"></div>
+        <div
+          class="box five"
+          style="--PornImg: url('/assets/img/cover- (1).jpg')"
+          data-text="Blowjob"></div>
+      </div>
+    </div>
+    <!--Navbar Menu-->
+    <div class="nav flex">
+      <nav class="flex">
+        <ul>
+          <li class="lists active">
+            <a href="#header">
+              <span class="icon">
+                <ion-icon name="home-outline"></ion-icon>
+              </span>
+              <span class="text">Home</span>
+            </a>
+          </li>
+          <li class="lists">
+            <a href="#Profile">
+              <span class="icon">
+                <ion-icon name="videocam-outline"></ion-icon>
+              </span>
+              <span class="text">Videos</span>
+            </a>
+          </li>
+          <li class="lists">
+            <a href="#Message">
+              <span class="icon">
+                <ion-icon name="chatbubble-outline"></ion-icon>
+              </span>
+              <span class="text">Message</span>
+            </a>
+          </li>
+          <li class="lists">
+            <a href="#Photos">
+              <span class="icon">
+                <ion-icon name="camera-outline"></ion-icon>
+              </span>
+              <span class="text">Photos</span>
+            </a>
+          </li>
+          <li class="lists">
+            <a href="#Settings">
+              <span class="icon">
+                <ion-icon name="settings-outline"></ion-icon>
+              </span>
+              <span class="text">Settings</span>
+            </a>
+          </li>
+          <div class="indicator"></div>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="Profile">
+      <h4>Videos</h4>
+    </div>
+    <div id="Message">
+      <h4>Messages</h4>
+    </div>
+    <div id="Photos">
+      <h4>Photos</h4>
+    </div>
+    <div id="Settings">
+      <h4>Settings</h4>
+    </div>
+
+    <!-- JAVASCRIPT Codes-->
+    <script>
+      //
+      const list = document.querySelectorAll(".lists");
+      function myFun() {
+        list.forEach((item) => {
+          item.classList.remove("active");
+          this.classList.add("active");
+        });
+      }
+      list.forEach((item) => {
+        item.addEventListener("click", myFun);
+      });
+      // NAVBAR
+      const ShowNavBar = document.querySelectorAll(
+        ".container__header--navlinks"
+      );
+      const ToggleIcon = document.querySelectorAll(".svg");
+      // Method_1__USing ForEach
+      //     ToggleIcon.forEach((item)=>{
+      //    item.addEventListener("click",()=>{
+      //  ShowNavBar.forEach((item)=>{
+      //  item.classList.toggle("active__")
+      // });
+      // });
+      // });
+      // Method--2
+      function TglFUN() {
+        ShowNavBar.forEach((item) => {
+          item.classList.toggle("active__");
+        });
+      }
+      ToggleIcon.forEach((item) => {
+        item.addEventListener("click", TglFUN);
+      });
+      // Method 3
+      // const NavLinks=document.querySelectorAll(".container__header--navlinks");
+      // const svg=document.querySelectorAll(".svg");
+      // svg[0].addEventListener("click",(()=>{
+      //   NavLinks[0].classList.toggle("active__")
+      // }))
+      //
+
+      let Title = document.getElementById("h2");
+      // Function Declaration
+      const RandomColors = () => {
+        let charts = "1234567890abcdef";
+        let Length = 6;
+        let color = "";
+        for (i = 1; i <= Length; i++) {
+          let RandomGenerator = Math.floor(Math.random() * charts.length);
+          color += charts.substring(RandomGenerator, RandomGenerator + 1);
+        }
+        return "#" + color;
+      };
+
+      setInterval(() => {
+        Title.style.background = RandomColors();
+        Title.style.color = RandomColors();
+      }, 2000);
+      console.log(RandomColors());
+
+      // Login Btn JS
+      let Button = document.getElementById("ButtonClick");
+      let LoginPage = document.querySelectorAll(".login_form");
+      let RemoveBtn = document.getElementsByClassName("close_icon");
+
+      Button.addEventListener("click", function BtnClicked() {
+        LoginPage.forEach((login) => {
+          login.classList.add("Active__Login");
+        });
+        RemoveBtn[0].addEventListener("click", function BtnRemove() {
+          LoginPage.forEach((remove) => {
+            remove.classList.remove("Active__Login");
+          });
+        });
+      });
+      // Signup Btn JS
+      let Button2 = document.getElementById("ButtonClick_2");
+      let signupPage = document.querySelectorAll(".signup_form");
+      let RemoveBtn2 = document.getElementsByClassName("close_icon2");
+
+      Button2.addEventListener("click", function BtnClicked2() {
+        signupPage.forEach((login) => {
+          login.classList.add("Active__Signup");
+        });
+        RemoveBtn2[0].addEventListener("click", function BtnRemove2() {
+          signupPage.forEach((remove) => {
+            remove.classList.remove("Active__Signup");
+          });
+        });
+      });
+    </script>
+
+    <!-- JAVASCRIPT ICONS-->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

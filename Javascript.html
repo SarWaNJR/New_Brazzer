@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rubik+Iso&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background: #011936;
+        font-family: "Poppins", sans-serif;
+      }
+      .header {
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+      }
+      h1 {
+        display: inline;
+        font-family: "Poppins", sans-serif;
+        padding: 4px 22px;
+        background: wheat;
+        border-radius: 12px;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+        cursor: pointer;
+        transition: color 0.2s ease, background 0.4s ease-in-out;
+      }
+      /* Container */
+      .container {
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        position: relative;
+        width: 80%;
+        margin: auto;
+        gap: 20px;
+      }
+      .box {
+        width: 250px;
+        height: 250px;
+        border: 4px ridge honeydew;
+        border-radius: 12px;
+        margin: auto;
+        transition: 1.2s ease-in-out;
+      }
+      .box:nth-child(3n + 1) {
+        transform: translate(-400px, 0) scale(0);
+      }
+      .box:nth-child(3n + 2) {
+        transform: translate(0, 200px) scale(0);
+      }
+      .box:nth-child(3n + 3) {
+        transform: translate(400px, 0) scale(0);
+      }
+      .container .box.active {
+        transform: translate(0) scale(1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1 id="header" onclick="Onclick();">Using Javascript</h1>
+    </div>
+    <div class="container"></div>
+
+    <!-- Javascript Code -->
+
+    <script>
+      // Variables
+      let Header = document.getElementById("header");
+      let GetClass = document.querySelector(".container");
+      // Functions
+      //Function Expression (Anonymous function)(Arrow Function)
+      const RandomColors = () => {
+        let charts = "1234567890abcdef";
+        let ColorLength = 6;
+        let color = "";
+        for (i = 1; i <= ColorLength; i++) {
+          let RandomColorGenerator = Math.floor(Math.random() * charts.length);
+          color += charts.substring(
+            RandomColorGenerator,
+            RandomColorGenerator + 1
+          );
+        }
+        return "#" + color;
+      }; //   console.log(RandomColors());
+      //  Function Declaration
+      function Onclick() {
+        Header.style.color = RandomColors();
+        Header.style.background = RandomColors();
+      }
+      // Create 60 Boxes using JS forloop
+      for (i = 1; i <= 60; i++) {
+        let CreateDiv = document.createElement("div");
+        CreateDiv.classList.add("box");
+        GetClass.appendChild(CreateDiv);
+      }
+      //   Create a class (.active) during scrolling the window;
+      //   First Get the classes using Queryselectors
+
+      let SelectAll = document.querySelectorAll(".box");
+      function ScrollActive() {
+        SelectAll.forEach((item) => {
+          if (item.offsetTop < window.scrollY) {
+            item.classList.add("active");
+            item.style.background = RandomColors();
+          } else {
+            item.classList.remove("active");
+          }
+        });
+      }
+      window.addEventListener("scroll", ScrollActive);
+    </script>
+  </body>
+</html>
