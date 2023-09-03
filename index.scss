@@ -957,7 +957,8 @@ nav ul li:nth-child(5).active ~ .indicator {
   //
 
   .Galary__header {
-    width: 40%;
+    width: max-content;
+    padding: 4px 40px;
     transform: translateY(-4rem);
   }
   .img__slider {
@@ -1313,7 +1314,7 @@ nav ul li:nth-child(5).active ~ .indicator {
     // top: 50%;
     // transform: translate(-50%, -50%) scale(1);
     display: flex;
-    z-index: 99;
+    z-index: 8;
   }
   .Active__Signup {
     // top: 50%;
