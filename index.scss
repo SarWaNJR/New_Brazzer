@@ -19,7 +19,9 @@ $App-bg-maps: (
   "Gree": #519872,
   "yello": #ea9010,
 );
-
+:root {
+  background: var(--PornImg);
+}
 //
 * {
   margin: 0;
@@ -31,6 +33,7 @@ $App-bg-maps: (
 body {
   background: #000;
 }
+
 ::selection {
   color: deeppink;
   background-color: hsl(0, 0, 18%);
@@ -683,6 +686,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 .box {
   position: relative;
   background: var(--PornImg);
+  // background-image: var(--PornImg);
   background-position: center;
   background-size: cover;
   display: flex;
